@@ -483,6 +483,7 @@ body {
 .nav-menu {
   width: 200px;
   height: 870px;
+  border: 1px solid white;
   margin: 10px 0 10px 20px;
 }
 
