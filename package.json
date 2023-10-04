@@ -1,0 +1,11 @@
+{
+  "name": "tgk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch src/pages/main/style.scss src/pages/main/style.css"
+  },
+  "author": "Zajkov Mikhail",
+  "license": "ISC"
+}

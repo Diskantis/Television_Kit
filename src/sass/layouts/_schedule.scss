@@ -1,0 +1,114 @@
+.schedule {
+  margin: 10px;
+}
+
+.select-date {
+  display: flex;
+  justify-content: center;
+}
+
+.week-current {
+  width: 400px;
+  color: #42d312;
+  text-align: center;
+  @extend %font-secondary;
+  @include font($size: 3.0rem, $height: 3.0rem, $weight: 400);
+}
+
+.week-prev, .week-next {
+  width: 30px;
+  height: 13px;
+  display: block;
+  cursor: pointer;
+  margin-top: 8px;
+  background: url("../../assets/icon/icos-v2.png") -40px -155px;
+}
+
+.week-next {
+  background: url("../../assets/icon/icos-v2.png") -40px -185px;
+}
+
+.week-line {
+  height: 30px;
+  display: flex;
+  margin: 10px 0 10px 214px;
+}
+
+.week__line {
+  width: 202px;
+  height: 830px;
+  background-color: #333333;
+}
+
+.week-day_date {
+  width: 210px;
+  color: #0059ff;
+  margin-top: 10px;
+  text-align: center;
+  @extend %font-secondary;
+  @include font($size: 2.0rem, $height: 2.0rem, $weight: 400);
+}
+
+.week-content {
+  width: 1670px;
+  max-height: 790px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #2C2C2CFF;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #818181FF;
+  }
+}
+
+.kit-week {
+  display: flex;
+  margin: 0 0 10px;
+}
+
+.card-kit__name {
+  margin: auto;
+  @extend %font-secondary;
+  @include font($size: 3.5rem, $height: 3.5rem, $weight: 600);
+}
+
+.card-week {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  column-gap: 16px;
+}
+
+.card-kit,.card-day {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: $color-dark-text;
+}
+
+.card__time {
+  color: #dcbb14;
+  margin: 5px 10px;
+  text-align: center;
+  @extend %font-time;
+  @include font($size: 2.5rem, $height: 2.5rem, $weight: 600);
+}
+
+.card__text {
+  color: white;
+  text-align: center;
+  @extend %font-secondary;
+  @include font($size: 1.6rem, $height: 1.6rem);
+}
+
+.card__line {
+  width: 170px;
+  margin: 1px 10px 5px;
+  border-top: 1px solid #FFFFFF;
+}

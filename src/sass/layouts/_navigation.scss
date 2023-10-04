@@ -1,0 +1,48 @@
+.nav-menu {
+  width: 200px;
+  height: 870px;
+  //border: 1px solid white;
+  margin: 10px 0 10px 20px;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin-left: 10px;
+  padding-left: 30px;
+}
+
+.contact_location {
+  background-image: url("../../assets/icon/cont-map.svg");
+}
+
+.contact_phone {
+  background-image: url("../../assets/icon/cont-phone.svg");
+}
+
+.contact_email {
+  background-image: url("../../assets/icon/cont-email.svg");
+}
+
+.contact_discord {
+  background-image: url("../../assets/icon/cont-discord.svg");
+}
+
+.contact_telegram {
+  background-image: url("../../assets/icon/cont-telegram.svg");
+}
+
+.contact_git {
+  background-image: url("../../assets/icon/cont-github.svg");
+}
+
+.contact_location a, .contact_phone a, .contact_email a, .contact_discord a, .contact_telegram a, .contact_git a {
+  width: 100%;
+  color: #FFFFFF;
+  text-decoration-line: none;
+  cursor: pointer;
+}

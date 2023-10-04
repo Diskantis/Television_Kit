@@ -1,0 +1,22 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: auto;
+  color: $color-body-text;
+  @extend %font-secondary;
+  @include font($size: 1.6rem, $height: 2.4rem);
+  background-color: #111111FF;
+}
+
+.main {
+  display: flex;
+}
