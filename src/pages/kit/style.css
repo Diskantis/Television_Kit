@@ -434,13 +434,8 @@ body {
   background-color: #111111;
 }
 
-.main {
-  display: flex;
-}
-
 .header {
   background-color: #424242;
-  position: static;
 }
 
 .wrapper-header {
@@ -481,10 +476,10 @@ body {
 }
 
 .nav-menu {
-  width: 200px;
-  height: 870px;
+  height: 830px;
   border: 1px solid white;
-  margin: 10px 0 10px 20px;
+  background-color: #ce6969;
+  margin-top: 50px;
 }
 
 .contact__item {
@@ -523,7 +518,7 @@ body {
 }
 
 .contact_location a, .contact_phone a, .contact_email a, .contact_discord a, .contact_telegram a, .contact_git a {
-  width: 100%;
+  width: 160px;
   color: #FFFFFF;
   text-decoration-line: none;
   cursor: pointer;
@@ -542,9 +537,12 @@ body {
 .circle {
   width: 40px;
   height: 40px;
-  border: 1px solid #262626;
+  border: 1px solid #414142;
   border-radius: 50%;
-  background-color: #262626;
+  background-color: #414142;
+}
+.circle:hover {
+  background-color: #2a2a2a;
 }
 
 .hamburger {

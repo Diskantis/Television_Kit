@@ -1,47 +1,68 @@
-.schedule {
-  margin: 10px;
+.main {
+  display: flex;
+  //background-color: #bbb9b9;
+  margin: 0 20px;
 }
 
-.select-date {
+.schedule {
+  width: 100%;
+  padding-left: 10px;
+  //background-color: #282828;
+}
+
+.select-week {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 
-.week-current {
-  width: 400px;
+.select-week_current {
+  width: 25%;
   color: #42d312;
   text-align: center;
   @extend %font-secondary;
   @include font($size: 3.0rem, $height: 3.0rem, $weight: 400);
 }
 
-.week-prev, .week-next {
+.select-week__prev, .select-week__next {
   width: 30px;
   height: 13px;
   display: block;
   cursor: pointer;
-  margin-top: 8px;
+
+}
+
+.select-week__prev {
   background: url("../../assets/icon/icos-v2.png") -40px -155px;
+  &:hover {
+    background: url("../../assets/icon/icos-v2.png") -40px -140px;
+  }
 }
-
-.week-next {
+.select-week__next {
   background: url("../../assets/icon/icos-v2.png") -40px -185px;
+  &:hover {
+    background: url("../../assets/icon/icos-v2.png") -40px -170px;
+  }
 }
 
-.week-line {
+.week-lines {
   height: 30px;
   display: flex;
-  margin: 10px 0 10px 214px;
+  margin-left: 214px;
 }
 
-.week__line {
+.week-day__line-dark {
   width: 202px;
-  height: 830px;
+  background-color: #111112;
+}
+
+.week-day__line-light {
+  width: 210px;
   background-color: #333333;
 }
 
-.week-day_date {
-  width: 210px;
+.week-day__date {
   color: #0059ff;
   margin-top: 10px;
   text-align: center;
@@ -50,7 +71,6 @@
 }
 
 .week-content {
-  width: 1670px;
   max-height: 790px;
   display: flex;
   flex-direction: column;

@@ -405,7 +405,7 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.card__text, .card-kit__name, .week-day_date, .week-current, .date, body {
+.card__text, .card-kit__name, .week-day__date, .select-week_current, .date, body {
   font-family: "Arial", Arial, sans-serif;
 }
 
@@ -434,13 +434,8 @@ body {
   background-color: #111111;
 }
 
-.main {
-  display: flex;
-}
-
 .header {
   background-color: #424242;
-  position: static;
 }
 
 .wrapper-header {
@@ -480,17 +475,25 @@ body {
   opacity: 1;
 }
 
-.schedule {
-  margin: 10px;
+.main {
+  display: flex;
+  margin: 0 20px;
 }
 
-.select-date {
+.schedule {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.select-week {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 
-.week-current {
-  width: 400px;
+.select-week_current {
+  width: 25%;
   color: #42d312;
   text-align: center;
   font-style: normal;
@@ -499,33 +502,44 @@ body {
   line-height: 3rem;
 }
 
-.week-prev, .week-next {
+.select-week__prev, .select-week__next {
   width: 30px;
   height: 13px;
   display: block;
   cursor: pointer;
-  margin-top: 8px;
+}
+
+.select-week__prev {
   background: url("../../assets/icon/icos-v2.png") -40px -155px;
 }
+.select-week__prev:hover {
+  background: url("../../assets/icon/icos-v2.png") -40px -140px;
+}
 
-.week-next {
+.select-week__next {
   background: url("../../assets/icon/icos-v2.png") -40px -185px;
 }
-
-.week-line {
-  height: 30px;
-  display: flex;
-  margin: 10px 0 10px 214px;
+.select-week__next:hover {
+  background: url("../../assets/icon/icos-v2.png") -40px -170px;
 }
 
-.week__line {
+.week-lines {
+  height: 30px;
+  display: flex;
+  margin-left: 214px;
+}
+
+.week-day__line-dark {
   width: 202px;
-  height: 830px;
+  background-color: #111112;
+}
+
+.week-day__line-light {
+  width: 210px;
   background-color: #333333;
 }
 
-.week-day_date {
-  width: 210px;
+.week-day__date {
   color: #0059ff;
   margin-top: 10px;
   text-align: center;
@@ -536,7 +550,6 @@ body {
 }
 
 .week-content {
-  width: 1670px;
   max-height: 790px;
   display: flex;
   flex-direction: column;
@@ -606,10 +619,10 @@ body {
 }
 
 .nav-menu {
-  width: 200px;
-  height: 870px;
+  height: 830px;
   border: 1px solid white;
-  margin: 10px 0 10px 20px;
+  background-color: #ce6969;
+  margin-top: 50px;
 }
 
 .contact__item {
@@ -648,7 +661,7 @@ body {
 }
 
 .contact_location a, .contact_phone a, .contact_email a, .contact_discord a, .contact_telegram a, .contact_git a {
-  width: 100%;
+  width: 160px;
   color: #FFFFFF;
   text-decoration-line: none;
   cursor: pointer;
@@ -667,9 +680,12 @@ body {
 .circle {
   width: 40px;
   height: 40px;
-  border: 1px solid #262626;
+  border: 1px solid #414142;
   border-radius: 50%;
-  background-color: #262626;
+  background-color: #414142;
+}
+.circle:hover {
+  background-color: #2a2a2a;
 }
 
 .hamburger {

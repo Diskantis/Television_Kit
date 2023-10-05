@@ -1,16 +1,24 @@
-let language = localStorage.getItem('lang') ? localStorage.getItem('lang') : document.getElementsByTagName("html")[0].getAttribute("lang");
-const time = document.querySelector('.time');
-const data = document.querySelector('.date');
+
+const elements = {
+    language: localStorage.getItem('lang') ? localStorage.getItem('lang') : document.getElementsByTagName("html")[0].getAttribute("lang"),
+    time: document.querySelector('.time'),
+    data: document.querySelector('.date'),
+    hamburger: document.querySelector('.hamburger'),
+}
+
+window.onload = function () {
+    console.log('Hi, Zajkov Mikhail')
+    showTime();
+    showDate();
+    addHamburgerClickHandler();
+}
 
 // SHOW TIME
-showTime();
-// getSlideNext()
-
 function showTime() {
     const date = new Date();
-    time.textContent = date.toLocaleTimeString();
+    elements.time.textContent = date.toLocaleTimeString();
     setTimeout(showTime, 1000);
-    showDate();
+
 }
 
 
@@ -26,12 +34,37 @@ function showDate() {
     const weekdayBel = ["Нядзеля", "Панядзелак", "Аўторак", "Серада", "Чацвер", "Пятніца", "Субота",];
 
     // "Воскресенье, 16 мая" / "Sunday, May 16" / "Нядзеля, 16 траўня"
-    if (language === 'en') {
+    if (elements.language === 'en') {
         const options = {weekday: 'long', day: 'numeric', month: 'long'};
-        data.textContent = date.toLocaleDateString(language, options) // 'ru-RU', 'be-BE'
-    } else if (language === 'ru') {
-        data.textContent = `${weekdayRus[dayWeek]}, ${dayNum} ${monthRus[month]}`
-    } else if (language === 'be') {
-        data.textContent = `${weekdayBel[dayWeek]}, ${dayNum} ${monthBel[month]}`
+        elements.data.textContent = date.toLocaleDateString(elements.language, options) // 'ru-RU', 'be-BE'
+    } else if (elements.language === 'ru') {
+        elements.data.textContent = `${weekdayRus[dayWeek]}, ${dayNum} ${monthRus[month]}`
+    } else if (elements.language === 'be') {
+        elements.data.textContent = `${weekdayBel[dayWeek]}, ${dayNum} ${monthBel[month]}`
     }
+}
+
+// HAMBURGER & MENU
+const addHamburgerClickHandler = () => {
+    elements.hamburger.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    // document.addEventListener('click', e => {
+    //     let target = e.target;
+    //     let its_hamburger = target === elements.hamburger;
+    //     let menu_is_active = elements.menu.classList.contains('active');
+    //
+    //     if (!its_hamburger && menu_is_active) {
+    //         e.stopPropagation();
+    //         toggleMenu();
+    //     }
+    // })
+}
+
+const toggleMenu = () => {
+    elements.hamburger.classList.toggle('active');
+    console.log("Привет")
+    // elements.menu.classList.toggle('active');
 }
