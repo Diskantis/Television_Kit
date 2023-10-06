@@ -27,19 +27,21 @@
 </header>
 <main class="main">
   <aside class="nav-menu">
-    <section class="menu">
-      <ul class="contact__content">
-        <li class="contact__item contact_email"><a href="../timing/index.html">Расписание</a></li>
-        <li class="contact__item contact_phone"><a href="../kit/index.html">Комплекты</a></li>
-        <li class="contact__item contact_location"><a href="../equipment/index.html">Оборудование</a></li>
+      <ul class="menu__content">
+        <li class="menu"><a href="../timing/index.html" class="menu__item icon_timing">Расписание</a></li>
+        <li class="menu"><a href="../kit/index.html" class="menu__item icon_kit">Комплекты</a></li>
+        <li class="menu"><a href="../equipment/index.html" class="menu__item icon_equipment">Оборудование</a></li>
       </ul>
-    </section>
   </aside>
   <section class="schedule">
     <div class="select-week">
-      <div class="select-week__prev"></div>
+      <svg class="arrow-left-svg" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="arrow-path" d="M13 0C9.88788 3.00339 7.045 4.37719 0 6.5C7.02663 8.71414 9.87338 10.2091 13 13L10 7.58333H30V5.41667H10L13 0Z" fill="#AAAAAAFF" stroke="#AAAAAAFF" stroke-width="0.2"/>
+      </svg>
       <p class="select-week_current">02.10.2023 - 08.10.2023</p>
-      <div class="select-week__next"></div>
+      <svg class="arrow-right-svg" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="arrow-path" d="M13 0C9.88788 3.00339 7.045 4.37719 0 6.5C7.02663 8.71414 9.87338 10.2091 13 13L10 7.58333H30V5.41667H10L13 0Z" fill="#AAAAAAFF" stroke="#AAAAAAFF" stroke-width="0.2"/>
+      </svg>
     </div>
     <div class="week-lines">
       <div class="week-day__line-dark">

@@ -1,31 +1,51 @@
 .nav-menu {
-  height: 830px;
-  border: 1px solid white;
-  background-color: #ce6969;
-  margin-top: 50px;
+  width: 40px;
+  height: 870px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #252525;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
-.contact__item {
+.nav-menu.active{
+  width: 230px;
+  &:hover {
+    width: 230px;
+  }
+}
+
+.menu__content li {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  &:hover {
+    border-radius: 0 10px 10px 0;
+    background-color: #42d312;
+  }
+}
+
+.menu__item {
   display: flex;
   align-items: center;
   min-height: 30px;
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: left center;
-  margin-left: 10px;
   padding-left: 30px;
+  margin-left: 10px;
 }
 
-.contact_location {
-  background-image: url("../../assets/icon/cont-map.svg");
+.icon_timing {
+  background-image: url("../../assets/icon/cont-email.svg");
 }
 
-.contact_phone {
+.icon_kit {
   background-image: url("../../assets/icon/cont-phone.svg");
 }
 
-.contact_email {
-  background-image: url("../../assets/icon/cont-email.svg");
+.icon_equipment {
+  background-image: url("../../assets/icon/cont-map.svg");
 }
 
 .contact_discord {
@@ -40,7 +60,7 @@
   background-image: url("../../assets/icon/cont-github.svg");
 }
 
-.contact_location a, .contact_phone a, .contact_email a, .contact_discord a, .contact_telegram a, .contact_git a {
+.menu a {
   width: 160px;
   color: #FFFFFF;
   text-decoration-line: none;

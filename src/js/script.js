@@ -4,6 +4,7 @@ const elements = {
     time: document.querySelector('.time'),
     data: document.querySelector('.date'),
     hamburger: document.querySelector('.hamburger'),
+    menu: document.querySelector('.nav-menu'),
 }
 
 window.onload = function () {
@@ -65,6 +66,6 @@ const addHamburgerClickHandler = () => {
 
 const toggleMenu = () => {
     elements.hamburger.classList.toggle('active');
+    elements.menu.classList.toggle('active');
     console.log("Привет")
-    // elements.menu.classList.toggle('active');
 }
