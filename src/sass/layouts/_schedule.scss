@@ -1,56 +1,98 @@
-.schedule {
-  margin: 10px;
+.main {
+  display: flex;
+  //background-color: #bbb9b9;
+  margin: 0 20px;
 }
 
-.select-date {
+.schedule {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.select-week {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 
-.week-current {
-  width: 400px;
+.select-week_current {
+  width: 25%;
   color: #42d312;
   text-align: center;
   @extend %font-secondary;
   @include font($size: 3.0rem, $height: 3.0rem, $weight: 400);
 }
 
-.week-prev, .week-next {
+.select-week__prev, .select-week__next {
   width: 30px;
   height: 13px;
   display: block;
   cursor: pointer;
-  margin-top: 8px;
-  background: url("../../assets/icon/icos-v2.png") -40px -155px;
 }
 
-.week-next {
-  background: url("../../assets/icon/icos-v2.png") -40px -185px;
+.arrow-left-svg {
+  cursor: pointer;
+  &:hover {
+    .arrow-path {
+      fill: #414141FF;
+    }
+  }
 }
 
-.week-line {
+.arrow-right-svg {
+  cursor: pointer;
+  transform: rotateY(180deg);
+  &:hover {
+    .arrow-path {
+      fill: #414141FF;
+    }
+  }
+}
+
+.days-lines {
   height: 30px;
   display: flex;
-  margin: 10px 0 10px 214px;
+  margin-right: 10px;
 }
 
-.week__line {
-  width: 202px;
+.label-dummy {
+  display: flex;
+  min-width: 190px;
+  margin-right: 20px;
+}
+
+.label-days {
+  width: 86.5%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.day-line__dark {
+  width: 50%;
+  height: 830px;
+  //background-color: #d7d56f;
+  z-index: -1;
+}
+
+.day-line__light {
+  width: 50%;
   height: 830px;
   background-color: #333333;
+  z-index: -1;
 }
 
-.week-day_date {
-  width: 210px;
+.day-label__date {
   color: #0059ff;
   margin-top: 10px;
   text-align: center;
   @extend %font-secondary;
-  @include font($size: 2.0rem, $height: 2.0rem, $weight: 400);
+  @include font($size: 2.0rem, $height: 2.0rem, $weight: 600);
 }
 
+
+
 .week-content {
-  width: 1670px;
   max-height: 790px;
   display: flex;
   flex-direction: column;
@@ -67,7 +109,7 @@
 
 .kit-week {
   display: flex;
-  margin: 0 0 10px;
+  margin-bottom: 20px;
 }
 
 .card-kit__name {
@@ -77,19 +119,22 @@
 }
 
 .card-week {
+  width: 86.5%;
   display: flex;
-  justify-content: space-between;
-  margin-left: 30px;
-  column-gap: 16px;
+  justify-content: space-around;
 }
 
 .card-kit,.card-day {
   display: flex;
   flex-direction: column;
-  width: 190px;
+  min-width: 190px;
   border: 1px solid white;
   border-radius: 10px;
   background: $color-dark-text;
+}
+
+.card-kit {
+  margin-right: 20px;
 }
 
 .card__time {

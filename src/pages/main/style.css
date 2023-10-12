@@ -405,7 +405,7 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.card__text, .card-kit__name, .week-day_date, .week-current, .date, body {
+.card__text, .card-kit__name, .day-label__date, .select-week_current, .date, body {
   font-family: "Arial", Arial, sans-serif;
 }
 
@@ -434,13 +434,8 @@ body {
   background-color: #111111;
 }
 
-.main {
-  display: flex;
-}
-
 .header {
   background-color: #424242;
-  position: static;
 }
 
 .wrapper-header {
@@ -480,17 +475,25 @@ body {
   opacity: 1;
 }
 
-.schedule {
-  margin: 10px;
+.main {
+  display: flex;
+  margin: 0 20px;
 }
 
-.select-date {
+.schedule {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.select-week {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 
-.week-current {
-  width: 400px;
+.select-week_current {
+  width: 25%;
   color: #42d312;
   text-align: center;
   font-style: normal;
@@ -499,44 +502,70 @@ body {
   line-height: 3rem;
 }
 
-.week-prev, .week-next {
+.select-week__prev, .select-week__next {
   width: 30px;
   height: 13px;
   display: block;
   cursor: pointer;
-  margin-top: 8px;
-  background: url("../../assets/icon/icos-v2.png") -40px -155px;
 }
 
-.week-next {
-  background: url("../../assets/icon/icos-v2.png") -40px -185px;
+.arrow-left-svg {
+  cursor: pointer;
+}
+.arrow-left-svg:hover .arrow-path {
+  fill: #414141;
 }
 
-.week-line {
+.arrow-right-svg {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+.arrow-right-svg:hover .arrow-path {
+  fill: #414141;
+}
+
+.days-lines {
   height: 30px;
   display: flex;
-  margin: 10px 0 10px 214px;
+  margin-right: 10px;
 }
 
-.week__line {
-  width: 202px;
+.label-dummy {
+  display: flex;
+  min-width: 190px;
+  margin-right: 20px;
+}
+
+.label-days {
+  width: 86.5%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.day-line__dark {
+  width: 50%;
+  height: 830px;
+  z-index: -1;
+}
+
+.day-line__light {
+  width: 50%;
   height: 830px;
   background-color: #333333;
+  z-index: -1;
 }
 
-.week-day_date {
-  width: 210px;
+.day-label__date {
   color: #0059ff;
   margin-top: 10px;
   text-align: center;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 2rem;
   line-height: 2rem;
 }
 
 .week-content {
-  width: 1670px;
   max-height: 790px;
   display: flex;
   flex-direction: column;
@@ -553,7 +582,7 @@ body {
 
 .kit-week {
   display: flex;
-  margin: 0 0 10px;
+  margin-bottom: 20px;
 }
 
 .card-kit__name {
@@ -565,19 +594,22 @@ body {
 }
 
 .card-week {
+  width: 86.5%;
   display: flex;
-  justify-content: space-between;
-  margin-left: 30px;
-  column-gap: 16px;
+  justify-content: space-around;
 }
 
 .card-kit, .card-day {
   display: flex;
   flex-direction: column;
-  width: 190px;
+  min-width: 190px;
   border: 1px solid white;
   border-radius: 10px;
   background: #545454;
+}
+
+.card-kit {
+  margin-right: 20px;
 }
 
 .card__time {
@@ -606,33 +638,53 @@ body {
 }
 
 .nav-menu {
-  width: 200px;
+  width: 40px;
   height: 870px;
-  border: 1px solid white;
-  margin: 10px 0 10px 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #252525;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
-.contact__item {
+.nav-menu.active {
+  width: 230px;
+}
+.nav-menu.active:hover {
+  width: 230px;
+}
+
+.menu__content li {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.menu__content li:hover {
+  border-radius: 0 10px 10px 0;
+  background-color: #42d312;
+}
+
+.menu__item {
   display: flex;
   align-items: center;
   min-height: 30px;
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: left center;
-  margin-left: 10px;
   padding-left: 30px;
+  margin-left: 10px;
 }
 
-.contact_location {
-  background-image: url("../../assets/icon/cont-map.svg");
+.icon_timing {
+  background-image: url("../../assets/icon/cont-email.svg");
 }
 
-.contact_phone {
+.icon_kit {
   background-image: url("../../assets/icon/cont-phone.svg");
 }
 
-.contact_email {
-  background-image: url("../../assets/icon/cont-email.svg");
+.icon_equipment {
+  background-image: url("../../assets/icon/cont-map.svg");
 }
 
 .contact_discord {
@@ -647,8 +699,8 @@ body {
   background-image: url("../../assets/icon/cont-github.svg");
 }
 
-.contact_location a, .contact_phone a, .contact_email a, .contact_discord a, .contact_telegram a, .contact_git a {
-  width: 100%;
+.menu a {
+  width: 160px;
   color: #FFFFFF;
   text-decoration-line: none;
   cursor: pointer;
@@ -667,9 +719,12 @@ body {
 .circle {
   width: 40px;
   height: 40px;
-  border: 1px solid #262626;
+  border: 1px solid #414142;
   border-radius: 50%;
-  background-color: #262626;
+  background-color: #414142;
+}
+.circle:hover {
+  background-color: #2a2a2a;
 }
 
 .hamburger {

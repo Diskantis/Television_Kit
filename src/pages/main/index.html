@@ -2,661 +2,625 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
   <title>TGK</title>
 </head>
 <body>
-  <header class="header">
-    <div class="wrapper-header">
-      <div class="user-menu">
-        <div class="circle">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="user">
-          <span>Пользователь:</span><a class="user_name" href="#"> Зайкова Ольга Борисовна</a>
+<header class="header">
+  <div class="wrapper-header">
+    <div class="user-menu">
+      <div class="circle">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
-      <date class="date"></date>
-      <time class="time"></time>
+      <div class="user">
+        <span>Пользователь:</span><a class="user_name" href="#"> Зайкова Ольга Борисовна</a>
+      </div>
     </div>
-  </header>
-  <main class="main">
-    <aside class="nav-menu">
-      <section class="menu">
-        <ul class="contact__content">
-          <li class="contact__item contact_location"><a href="../equipment/index.html">Оборудование</a></li>
-          <li class="contact__item contact_phone"><a href="../kit/index.html">Комплекты</a></li>
-          <li class="contact__item contact_email"><span class="contact_header">Email:</span><a href="mailto:mn.zajkov@gmail.com" target="_blank"></a></li>
-          <li class="contact__item contact_discord"><span class="contact_header">Discord:</span><a href="https://discord.com" target="_blank"></a></li>
-          <li class="contact__item contact_telegram"><span class="contact_header">Telegram:</span><a href="https://t.me/ZajkovMikhail" target="_blank"></a></li>
-          <li class="contact__item contact_git"><span class="contact_header">GitHub:</span><a href="https://github.com/Diskantis" target="_blank"></a></li>
-        </ul>
-      </section>
-    </aside>
-    <section class="schedule">
-      <div class="week-select">
-        <div class="select-date">
-          <div class="week-prev"></div>
-          <p class="week-current">02.10.2023 - 08.10.2023</p>
-          <div class="week-next"></div>
+    <date class="date"></date>
+    <time class="time"></time>
+  </div>
+</header>
+<main class="main">
+  <aside class="nav-menu">
+      <ul class="menu__content">
+        <li class="menu"><a href="../timing/index.html" class="menu__item icon_timing">Расписание</a></li>
+        <li class="menu"><a href="../kit/index.html" class="menu__item icon_kit">Комплекты</a></li>
+        <li class="menu"><a href="../equipment/index.html" class="menu__item icon_equipment">Оборудование</a></li>
+      </ul>
+  </aside>
+  <section class="schedule">
+    <div class="select-week">
+      <svg class="arrow-left-svg" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="arrow-path" d="M13 0C9.88788 3.00339 7.045 4.37719 0 6.5C7.02663 8.71414 9.87338 10.2091 13 13L10 7.58333H30V5.41667H10L13 0Z" fill="#AAAAAAFF" stroke="#AAAAAAFF" stroke-width="0.2"/>
+      </svg>
+      <p class="select-week_current">02.10.2023 - 08.10.2023</p>
+      <svg class="arrow-right-svg" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="arrow-path" d="M13 0C9.88788 3.00339 7.045 4.37719 0 6.5C7.02663 8.71414 9.87338 10.2091 13 13L10 7.58333H30V5.41667H10L13 0Z" fill="#AAAAAAFF" stroke="#AAAAAAFF" stroke-width="0.2"/>
+      </svg>
+    </div>
+    <div class="days-lines">
+      <div class="label-dummy"></div>
+      <div class="label-days">
+        <div class="day-line__dark">
+          <p class="day-label__date">пн. 02.10</p>
+        </div>
+        <div class="day-line__light">
+          <p class="day-label__date">вт. 03.10</p>
+        </div>
+        <div class="day-line__dark">
+          <p class="day-label__date">ср. 04.10</p>
+        </div>
+        <div class="day-line__light">
+          <p class="day-label__date">чт. 05.10</p>
+        </div>
+        <div class="day-line__dark">
+          <p class="day-label__date">пт. 06.10</p>
+        </div>
+        <div class="day-line__light">
+          <p class="day-label__date">сб. 07.10</p>
+        </div>
+        <div class="day-line__dark">
+          <p class="day-label__date">вс. 08.10</p>
         </div>
       </div>
-      <div class="week-line">
-        <div class="week__line">
-          <p class="week-day_date">пн. 02.10</p>
+    </div>
+    <div class="week-content">
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 1</p>
         </div>
-        <p class="week-day_date">вт. 03.10</p>
-        <div class="week__line">
-          <p class="week-day_date">ср. 04.10</p>
-        </div>
-        <p class="week-day_date">чт. 05.10</p>
-        <div class="week__line">
-          <p class="week-day_date">пт. 06.10</p>
-        </div>
-        <p class="week-day_date">сб. 07.10</p>
-        <div class="week__line">
-          <p class="week-day_date">вс. 08.10</p>
-        </div>
-      </div>
-      <div class="week-content">
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">ТЖК 1</p>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">09:00 - 18:00</p>
+            <p class="card__text">А.В. Автухов</p>
+            <div class="card__line"></div>
           </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">09:00 - 18:00</p>
-              <p class="card__text">А.В. Автухов</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">09:00 - 18:00</p>
-              <p class="card__text">И.О. Андрушкевич</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">09:00 - 18:00</p>
-              <p class="card__text">И.О. Янковский</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">09:00 - 18:00</p>
-              <p class="card__text">И.О. Кривецкий</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">09:00 - 18:00</p>
-              <p class="card__text">И.О. Артеменко</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">09:00 - 18:00</p>
-              <p class="card__text">И.О. Васюкевич</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">09:00 - 18:00</p>
-              <p class="card__text">И.О. Хвидченя</p>
-              <div class="card__line"></div>
-            </div>
+          <div class="card-day">
+            <p class="card__time">09:00 - 18:00</p>
+            <p class="card__text">И.О. Андрушкевич</p>
+            <div class="card__line"></div>
           </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">ТЖК 2</p>
+          <div class="card-day">
+            <p class="card__time">09:00 - 18:00</p>
+            <p class="card__text">И.О. Янковский</p>
+            <div class="card__line"></div>
           </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
+          <div class="card-day">
+            <p class="card__time">09:00 - 18:00</p>
+            <p class="card__text">И.О. Кривецкий</p>
+            <div class="card__line"></div>
           </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
+          <div class="card-day">
+            <p class="card__time">09:00 - 18:00</p>
+            <p class="card__text">И.О. Артеменко</p>
+            <div class="card__line"></div>
           </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
+          <div class="card-day">
+            <p class="card__time">09:00 - 18:00</p>
+            <p class="card__text">И.О. Васюкевич</p>
+            <div class="card__line"></div>
           </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="kit-week">
-          <div class="card-kit">
-            <p class="card-kit__name">+</p>
-          </div>
-          <div class="card-week">
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
-            <div class="card-day">
-              <p class="card__time">--:-- - --:--</p>
-              <p class="card__text">- - - - - - - - - - - -</p>
-              <div class="card__line"></div>
-            </div>
+          <div class="card-day">
+            <p class="card__time">09:00 - 18:00</p>
+            <p class="card__text">И.О. Хвидченя</p>
+            <div class="card__line"></div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-  <footer>
-  </footer>
-  <script type="module" src="../../js/script.js"></script>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kit-week">
+      <div class="card-kit">
+        <p class="card-kit__name">ТЖК 2</p>
+      </div>
+      <div class="card-week">
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+      </div>
+    </div>
+      <div class="kit-week">
+      <div class="card-kit">
+        <p class="card-kit__name">ТЖК 2</p>
+      </div>
+      <div class="card-week">
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+        <div class="card-day">
+          <p class="card__time">--:-- - --:--</p>
+          <p class="card__text">- - - - - - - - - - - -</p>
+          <div class="card__line"></div>
+        </div>
+      </div>
+    </div>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="kit-week">
+        <div class="card-kit">
+          <p class="card-kit__name">ТЖК 2</p>
+        </div>
+        <div class="card-week">
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+          <div class="card-day">
+            <p class="card__time">--:-- - --:--</p>
+            <p class="card__text">- - - - - - - - - - - -</p>
+            <div class="card__line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+</footer>
+<script type="module" src="../../js/script.js"></script>
 </body>
 </html>
