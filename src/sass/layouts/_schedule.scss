@@ -50,37 +50,47 @@
   }
 }
 
-.select-week__next {
-  background: url("../../assets/icon/icos-v2.png") -40px -185px;
-  &:hover {
-    background: url("../../assets/icon/icos-v2.png") -40px -170px;
-  }
-}
-
-.week-lines {
+.days-lines {
   height: 30px;
   display: flex;
-  margin-left: 214px;
+  margin-right: 10px;
 }
 
-.week-day__line-dark {
-  width: 202px;
-  background-color: #111112;
+.label-dummy {
+  display: flex;
+  min-width: 190px;
+  margin-right: 20px;
 }
 
-.week-day__line-light {
-  width: 210px;
+.label-days {
+  width: 86.5%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.day-line__dark {
+  width: 50%;
+  height: 830px;
+  //background-color: #d7d56f;
+  z-index: -1;
+}
+
+.day-line__light {
+  width: 50%;
   height: 830px;
   background-color: #333333;
+  z-index: -1;
 }
 
-.week-day__date {
+.day-label__date {
   color: #0059ff;
   margin-top: 10px;
   text-align: center;
   @extend %font-secondary;
-  @include font($size: 2.0rem, $height: 2.0rem, $weight: 400);
+  @include font($size: 2.0rem, $height: 2.0rem, $weight: 600);
 }
+
+
 
 .week-content {
   max-height: 790px;
@@ -99,7 +109,7 @@
 
 .kit-week {
   display: flex;
-  margin: 0 0 10px;
+  margin-bottom: 20px;
 }
 
 .card-kit__name {
@@ -109,19 +119,22 @@
 }
 
 .card-week {
+  width: 86.5%;
   display: flex;
-  justify-content: space-between;
-  margin-left: 30px;
-  column-gap: 16px;
+  justify-content: space-around;
 }
 
 .card-kit,.card-day {
   display: flex;
   flex-direction: column;
-  width: 190px;
+  min-width: 190px;
   border: 1px solid white;
   border-radius: 10px;
   background: $color-dark-text;
+}
+
+.card-kit {
+  margin-right: 20px;
 }
 
 .card__time {
