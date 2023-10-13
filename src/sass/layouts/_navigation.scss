@@ -1,17 +1,21 @@
 .nav-menu {
-  width: 40px;
+  width: 230px;
   height: 870px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   border-radius: 10px;
   background-color: #252525;
   margin-top: 10px;
   padding-top: 10px;
 }
 
-.nav-menu.active{
-  width: 230px;
+.nav-menu.active {
+  width: 40px;
+  overflow: hidden;
   &:hover {
-    width: 230px;
+    width: 40px;
   }
 }
 

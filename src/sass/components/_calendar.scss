@@ -1,0 +1,95 @@
+.calendar-wrapper {
+  width: 200px;
+  height: 232px;
+  display: block;
+  padding: 5px;
+  border: 1px solid #dcdcff;
+  border-radius: 5px;
+  background: #343434;
+  margin: 2px auto;
+}
+
+.calendar-wrapper.active {
+  display: none;
+}
+
+table {
+  clear: both;
+  width: 100%;
+  color: #ffffff;
+}
+
+tr.days-name {
+  cursor: default;
+}
+
+td {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+td.normal {
+  cursor: pointer;
+}
+
+td.today {
+  font-weight: 700;
+  color: #ff0000;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0;
+}
+
+td.not-current {
+  color: #868686;
+  cursor: pointer;
+}
+
+td.normal:hover,
+td.today:hover,
+td.not-current:hover {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #575757;
+}
+
+.select-mount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.mount {
+  color: #18d312;
+  text-transform: uppercase;
+  @extend %font-secondary;
+  @include font($size: 1.5rem, $height: 2.4rem, $weight: 400);
+  padding: 2px 0 0;
+}
+
+#btnPrev,
+#btnNext {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0 2px;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-weight: bold;
+  color: #c0c0c0;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+#btnPrev:hover,
+#btnNext:hover {
+  color: #656565;
+  font-weight: bold;
+}

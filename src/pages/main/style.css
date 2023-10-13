@@ -405,7 +405,7 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.card__text, .card-kit__name, .day-label__date, .select-week_current, .date, body {
+.mount, .card__text, .card-kit__name, .day-label__date, .select-week_current, .date, body {
   font-family: "Arial", Arial, sans-serif;
 }
 
@@ -431,6 +431,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
+  letter-spacing: 0rem;
   background-color: #111111;
 }
 
@@ -470,6 +471,7 @@ body {
   font-weight: 600;
   font-size: 3.8rem;
   line-height: 3.8rem;
+  letter-spacing: 0rem;
   letter-spacing: 0;
   transition: 0.5s;
   opacity: 1;
@@ -500,6 +502,7 @@ body {
   font-weight: 400;
   font-size: 3rem;
   line-height: 3rem;
+  letter-spacing: 0rem;
 }
 
 .select-week__prev, .select-week__next {
@@ -563,6 +566,7 @@ body {
   font-weight: 600;
   font-size: 2rem;
   line-height: 2rem;
+  letter-spacing: 0rem;
 }
 
 .week-content {
@@ -591,6 +595,7 @@ body {
   font-weight: 600;
   font-size: 3.5rem;
   line-height: 3.5rem;
+  letter-spacing: 0rem;
 }
 
 .card-week {
@@ -600,12 +605,13 @@ body {
 }
 
 .card-kit, .card-day {
+  min-width: 190px;
   display: flex;
   flex-direction: column;
-  min-width: 190px;
   border: 1px solid white;
   border-radius: 10px;
   background: #545454;
+  cursor: pointer;
 }
 
 .card-kit {
@@ -620,6 +626,7 @@ body {
   font-weight: 600;
   font-size: 2.5rem;
   line-height: 2.5rem;
+  letter-spacing: 0rem;
 }
 
 .card__text {
@@ -629,6 +636,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.6rem;
+  letter-spacing: 0rem;
 }
 
 .card__line {
@@ -638,9 +646,11 @@ body {
 }
 
 .nav-menu {
-  width: 40px;
+  width: 230px;
   height: 870px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 10px;
   background-color: #252525;
   margin-top: 10px;
@@ -648,10 +658,11 @@ body {
 }
 
 .nav-menu.active {
-  width: 230px;
+  width: 40px;
+  overflow: hidden;
 }
 .nav-menu.active:hover {
-  width: 230px;
+  width: 40px;
 }
 
 .menu__content li {
@@ -752,6 +763,105 @@ body {
 
 .hamburger span:nth-of-type(3) {
   top: calc(50% + 8px);
+}
+
+.calendar-wrapper {
+  width: 200px;
+  height: 232px;
+  display: block;
+  padding: 5px;
+  border: 1px solid #dcdcff;
+  border-radius: 5px;
+  background: #343434;
+  margin: 2px auto;
+}
+
+.calendar-wrapper.active {
+  display: none;
+}
+
+table {
+  clear: both;
+  width: 100%;
+  color: #ffffff;
+}
+
+tr.days-name {
+  cursor: default;
+}
+
+td {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+td.normal {
+  cursor: pointer;
+}
+
+td.today {
+  font-weight: 700;
+  color: #ff0000;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0;
+}
+
+td.not-current {
+  color: #868686;
+  cursor: pointer;
+}
+
+td.normal:hover,
+td.today:hover,
+td.not-current:hover {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #575757;
+}
+
+.select-mount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.mount {
+  color: #18d312;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  letter-spacing: 0rem;
+  padding: 2px 0 0;
+}
+
+#btnPrev,
+#btnNext {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0 2px;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-weight: bold;
+  color: #c0c0c0;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+#btnPrev:hover,
+#btnNext:hover {
+  color: #656565;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -431,6 +431,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
+  letter-spacing: 0rem;
   background-color: #111111;
 }
 
@@ -470,15 +471,18 @@ body {
   font-weight: 600;
   font-size: 3.8rem;
   line-height: 3.8rem;
+  letter-spacing: 0rem;
   letter-spacing: 0;
   transition: 0.5s;
   opacity: 1;
 }
 
 .nav-menu {
-  width: 40px;
+  width: 230px;
   height: 870px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 10px;
   background-color: #252525;
   margin-top: 10px;
@@ -486,10 +490,11 @@ body {
 }
 
 .nav-menu.active {
-  width: 230px;
+  width: 40px;
+  overflow: hidden;
 }
 .nav-menu.active:hover {
-  width: 230px;
+  width: 40px;
 }
 
 .menu__content li {

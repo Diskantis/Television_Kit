@@ -125,12 +125,13 @@
 }
 
 .card-kit,.card-day {
+  min-width: 190px;
   display: flex;
   flex-direction: column;
-  min-width: 190px;
   border: 1px solid white;
   border-radius: 10px;
   background: $color-dark-text;
+  cursor: pointer;
 }
 
 .card-kit {
