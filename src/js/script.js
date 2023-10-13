@@ -7,6 +7,7 @@ const elements = {
     menu: document.querySelector('.nav-menu'),
     calendar: document.querySelector('.calendar-wrapper'),
     mount: document.querySelector('.mount'),
+    week: document.querySelector('.select-week_current'),
 
 }
 
@@ -16,6 +17,7 @@ window.onload = function () {
     showDate();
     addHamburgerClickHandler();
     startCalendar();
+    selectWeeks();
 }
 
 // SHOW TIME
@@ -210,3 +212,25 @@ const startCalendar = () => {
 function getId(id) {
     return document.getElementById(id);
 }
+
+
+// SCHEDULE
+//Устанавливаем текущую неделю
+Date.prototype.getWeek = function(start) {
+    start = start || 0;
+    let today = new Date(this.setHours(0, 0, 0, 0));
+    let day = today.getDay() - start;
+    let date = today.getDate() - day;
+
+    let StartDate = new Date(today.setDate(date));
+    let EndDate = new Date(today.setDate(date + 6));
+    return [StartDate, EndDate];
+}
+
+const selectWeeks = () => {
+    // Запись выбранного месяца и года
+    const Dates = new Date().getWeek();
+    elements.week.innerText = Dates[0].toLocaleDateString() + ' - '+ Dates[1].toLocaleDateString()
+}
+
+
