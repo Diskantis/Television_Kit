@@ -788,6 +788,8 @@ table {
 
 tr.days-name {
   cursor: default;
+  border-top: 1px solid #dcdcff;
+  border-bottom: 1px solid #dcdcff;
 }
 
 td {
@@ -828,7 +830,7 @@ td.not-current:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5px;
+  padding: 0 5px 5px;
 }
 
 .mount {
