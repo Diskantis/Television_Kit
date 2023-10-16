@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,13 +27,15 @@
   </div>
 </header>
 <main class="main">
-  <aside class="nav-menu">
+  <div class="wrapper-main">
+    <aside class="nav-menu">
       <ul class="menu__content">
         <li class="menu"><a href="../timing/index.html" class="menu__item icon_timing">Расписание</a></li>
         <li class="menu"><a href="../kit/index.html" class="menu__item icon_kit">Комплекты</a></li>
         <li class="menu"><a href="../equipment/index.html" class="menu__item icon_equipment">Оборудование</a></li>
+        <li class="menu"><a href="../employee/index.html" class="menu__item icon_employee">Персонал</a></li>
       </ul>
-      <div class="calendar-wrapper">
+      <div class="calendar">
         <div class="select-mount">
           <span class="mount"></span>
           <div>
@@ -44,174 +46,119 @@
         <div id="divCal">
         </div>
       </div>
-  </aside>
-  <section class="schedule">
-    <div class="select-week">
-      <svg class="arrow-left-svg" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path class="arrow-path" d="M13 0C9.88788 3.00339 7.045 4.37719 0 6.5C7.02663 8.71414 9.87338 10.2091 13 13L10 7.58333H30V5.41667H10L13 0Z" fill="#AAAAAAFF" stroke="#AAAAAAFF" stroke-width="0.2"/>
-      </svg>
-      <p class="select-week_current"></p>
-      <svg class="arrow-right-svg" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path class="arrow-path" d="M13 0C9.88788 3.00339 7.045 4.37719 0 6.5C7.02663 8.71414 9.87338 10.2091 13 13L10 7.58333H30V5.41667H10L13 0Z" fill="#AAAAAAFF" stroke="#AAAAAAFF" stroke-width="0.2"/>
-      </svg>
-    </div>
-    <div class="days-lines">
-      <div class="label-dummy"></div>
-      <div class="label-days">
-        <div class="day-line__dark">
-          <p class="day-label__date">пн. 02.10</p>
-        </div>
-        <div class="day-line__light">
-          <p class="day-label__date">вт. 03.10</p>
-        </div>
-        <div class="day-line__dark">
-          <p class="day-label__date">ср. 04.10</p>
-        </div>
-        <div class="day-line__light">
-          <p class="day-label__date">чт. 05.10</p>
-        </div>
-        <div class="day-line__dark">
-          <p class="day-label__date">пт. 06.10</p>
-        </div>
-        <div class="day-line__light">
-          <p class="day-label__date">сб. 07.10</p>
-        </div>
-        <div class="day-line__dark">
-          <p class="day-label__date">вс. 08.10</p>
-        </div>
+    </aside>
+    <section class="schedule">
+      <div class="select-week">
+        <svg class="arrow-svg_left" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="arrow-path" d="M13 0C9.88788 3.00339 7.045 4.37719 0 6.5C7.02663 8.71414 9.87338 10.2091 13 13L10 7.58333H30V5.41667H10L13 0Z" fill="#AAAAAAFF" stroke="#AAAAAAFF" stroke-width="0.2"/>
+        </svg>
+        <p class="select-week_current"></p>
+        <svg class="arrow-svg_right" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="arrow-path" d="M13 0C9.88788 3.00339 7.045 4.37719 0 6.5C7.02663 8.71414 9.87338 10.2091 13 13L10 7.58333H30V5.41667H10L13 0Z" fill="#AAAAAAFF" stroke="#AAAAAAFF" stroke-width="0.2"/>
+        </svg>
       </div>
-    </div>
-    <div class="week-content">
-      <div class="kit-week">
-        <div class="card-kit">
-          <p class="card-kit__name">ТЖК 1</p>
-        </div>
-        <div class="card-week">
-          <div class="card-day">
-            <p class="card__time">09:00 - 18:00</p>
-            <p class="card__text">А.В. Автухов</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">09:00 - 18:00</p>
-            <p class="card__text">И.О. Андрушкевич</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">09:00 - 18:00</p>
-            <p class="card__text">И.О. Янковский</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">09:00 - 18:00</p>
-            <p class="card__text">И.О. Кривецкий</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">09:00 - 18:00</p>
-            <p class="card__text">И.О. Артеменко</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">09:00 - 18:00</p>
-            <p class="card__text">И.О. Васюкевич</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">09:00 - 18:00</p>
-            <p class="card__text">И.О. Хвидченя</p>
-            <div class="card__line"></div>
-          </div>
-        </div>
+      <div class="days-lines">
+        <div class="label-dummy"></div>
+          <ul class="label-days">
+            <li class="day-label__date"><div class="day-date day-line__dark"></div></li>
+            <li class="day-label__date"><div class="day-date day-line__light"></div></li>
+            <li class="day-label__date"><div class="day-date day-line__dark"></div></li>
+            <li class="day-label__date"><div class="day-date day-line__light"></div></li>
+            <li class="day-label__date"><div class="day-date day-line__dark"></div></li>
+            <li class="day-label__date"><div class="day-date day-line__light"></div></li>
+            <li class="day-label__date"><div class="day-date day-line__dark"></div></li>
+          </ul>
       </div>
-      <div class="kit-week">
-        <div class="card-kit">
-          <p class="card-kit__name">ТЖК 2</p>
+      <div class="week-content">
+        <div class="kit-week">
+          <div class="card-kit">
+            <p class="card-kit__name">ТЖК 1</p>
+          </div>
+          <div class="card-week">
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">А.В. Автухов</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Андрушкевич</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Янковский</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Кривецкий</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Артеменко</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Васюкевич</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Хвидченя</p>
+              <div class="card__line"></div>
+            </div>
+          </div>
         </div>
-        <div class="card-week">
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
+        <div class="kit-week">
+          <div class="card-kit">
+            <p class="card-kit__name">ТЖК 1</p>
           </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
+          <div class="card-week">
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">А.В. Автухов</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Андрушкевич</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Янковский</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Кривецкий</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Артеменко</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Васюкевич</p>
+              <div class="card__line"></div>
+            </div>
+            <div class="card-day">
+              <p class="card__time">09:00 - 18:00</p>
+              <p class="card__text">И.О. Хвидченя</p>
+              <div class="card__line"></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="kit-week">
-        <div class="card-kit">
-          <p class="card-kit__name">ТЖК 2</p>
-        </div>
-        <div class="card-week">
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-          <div class="card-day">
-            <p class="card__time">--:-- - --:--</p>
-            <p class="card__text">- - - - - - - - - - - -</p>
-            <div class="card__line"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
-<footer>
+<footer class="footer">
 </footer>
 <script type="module" src="../../js/script.js"></script>
 </body>

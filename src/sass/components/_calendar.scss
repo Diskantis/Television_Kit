@@ -1,21 +1,19 @@
-.calendar-wrapper {
-  width: 200px;
+.calendar {
   height: 235px;
   display: block;
-  padding: 5px;
   border: 1px solid #dcdcff;
   border-radius: 5px;
-  background: #343434;
-  margin: 2px auto;
+  background: #424242;
+  margin: 5px;
+  padding: 5px;
 }
 
-.calendar-wrapper.active {
+.calendar.active {
   display: none;
 }
 
 table {
   clear: both;
-  width: 100%;
   color: #ffffff;
 }
 

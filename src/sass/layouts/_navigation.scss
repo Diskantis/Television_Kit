@@ -1,13 +1,12 @@
 .nav-menu {
-  width: 230px;
-  height: 870px;
+  width: 12vw;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   border-radius: 10px;
   background-color: #252525;
-  margin-top: 10px;
+  margin: 10px 0;
   padding-top: 10px;
 }
 
@@ -52,7 +51,7 @@
   background-image: url("../../assets/icon/cont-map.svg");
 }
 
-.contact_discord {
+.icon_employee {
   background-image: url("../../assets/icon/cont-discord.svg");
 }
 

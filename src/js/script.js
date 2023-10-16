@@ -5,10 +5,10 @@ const elements = {
     data: document.querySelector('.date'),
     hamburger: document.querySelector('.hamburger'),
     menu: document.querySelector('.nav-menu'),
-    calendar: document.querySelector('.calendar-wrapper'),
+    calendar: document.querySelector('.calendar'),
     mount: document.querySelector('.mount'),
     week: document.querySelector('.select-week_current'),
-
+    // date_name_week: document.querySelectorAll('.custom-select__city-address'),
 }
 
 window.onload = function () {
@@ -20,12 +20,13 @@ window.onload = function () {
     selectWeeks();
 }
 
+const DaysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Су', 'Вс'];
+
 // SHOW TIME
 function showTime() {
     const date = new Date();
     elements.time.textContent = date.toLocaleTimeString();
     setTimeout(showTime, 1000);
-
 }
 
 
@@ -57,17 +58,6 @@ const addHamburgerClickHandler = () => {
         e.stopPropagation();
         toggleMenu();
     });
-
-    // document.addEventListener('click', e => {
-    //     let target = e.target;
-    //     let its_hamburger = target === elements.hamburger;
-    //     let menu_is_active = elements.menu.classList.contains('active');
-    //
-    //     if (!its_hamburger && menu_is_active) {
-    //         e.stopPropagation();
-    //         toggleMenu();
-    //     }
-    // })
 }
 
 const toggleMenu = () => {
@@ -217,20 +207,52 @@ function getId(id) {
 // SCHEDULE
 //Устанавливаем текущую неделю
 Date.prototype.getWeek = function(start) {
-    start = start || 0;
+    start = start || 1;
     let today = new Date(this.setHours(0, 0, 0, 0));
     let day = today.getDay() - start;
     let date = today.getDate() - day;
 
-    let StartDate = new Date(today.setDate(date));
-    let EndDate = new Date(today.setDate(date + 6));
-    return [StartDate, EndDate];
+    let MoDate = new Date(today.setDate(date));
+    let TuDate = new Date(today.setDate(date + 1));
+    let WeDate = new Date(today.setDate(date + 2));
+    let ThDate = new Date(today.setDate(date + 3));
+    let FrDate = new Date(today.setDate(date + 4));
+    let SaDate = new Date(today.setDate(date + 5));
+    let SuDate = new Date(today.setDate(date + 6));
+    return [MoDate, TuDate, WeDate, ThDate, FrDate, SaDate, SuDate];
 }
 
 const selectWeeks = () => {
-    // Запись выбранного месяца и года
     const Dates = new Date().getWeek();
-    elements.week.innerText = Dates[0].toLocaleDateString() + ' - '+ Dates[1].toLocaleDateString()
+    elements.week.innerText = Dates[0].toLocaleDateString() + ' - '+ Dates[6].toLocaleDateString()
+    const date_format = { day: '2-digit', month: '2-digit'}
+    document.querySelectorAll('.day-date').forEach((e, n) => {
+        e.innerText = `${DaysOfWeek[n]}. ${Dates[n].toLocaleDateString(elements.language, date_format)}`;
+    });
 }
 
 
+
+// // Переход к следующему месяцу
+// const nextMonth = function() {
+//     if ( this.currMonth === 11 ) {
+//         this.currMonth = 0;
+//         this.currYear = this.currYear + 1;
+//     }
+//     else {
+//         this.currMonth = this.currMonth + 1;
+//     }
+//     this.showCurr();
+// };
+
+// // Переход к предыдущему месяцу
+// Cal.prototype.previousMonth = function() {
+//     if ( this.currMonth === 0 ) {
+//         this.currMonth = 11;
+//         this.currYear = this.currYear - 1;
+//     }
+//     else {
+//         this.currMonth = this.currMonth - 1;
+//     }
+//     this.showCurr();
+// };
