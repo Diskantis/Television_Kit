@@ -1,3 +1,5 @@
+import './index.html'
+import './style.scss'
 
 const elements = {
     language: localStorage.getItem('lang') ? localStorage.getItem('lang') : document.getElementsByTagName("html")[0].getAttribute("lang"),
