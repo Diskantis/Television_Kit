@@ -10,9 +10,8 @@ const filename = (ext, path='') => devMode ? `${path}[name]${ext}` : `${path}[na
 
 
 module.exports = {
-  entry: {
-    main: [path.resolve(__dirname, 'src/pages/main/index.js')],
-  },
+  entry: './src/app.js',
+    // { main: [path.resolve(__dirname, 'src/pages/main/index.js')] },
   output: {
     filename: filename('.js'),
     path: path.resolve(__dirname, 'public'),
@@ -24,14 +23,15 @@ module.exports = {
     hot: true,
   },
   resolve: {
-    extensions: ['.js', '.json', '.png',],
+    extensions: ['.js', '.json', '.png'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     }
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, 'src/pages/main/index.html'),
+      template: path.resolve(__dirname, 'src/index.html'),
+      // template: path.resolve(__dirname, 'src/pages/main/index.html'),
       inject: 'body'
     }),
     new MiniCssExtractPlugin({
