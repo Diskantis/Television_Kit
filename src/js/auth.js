@@ -1,21 +1,3 @@
-export function getAuthForm() {
-  return `
-    <form class="mui-form" id="auth-form">
-      <div class="mui-textfield mui-textfield--float-label">
-        <input type="email" id="email" required>
-        <label for="email"">Email</label>
-      </div>
-      <div class="mui-textfield mui-textfield--float-label">
-        <input type="password" id="password" required>
-        <label for="password"">Пароль</label>
-      </div>
-      <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">
-        Войти
-      </button>
-    </form>
-  `
-}
-
 export function authWithEmailAndPassword(email, password) {
   const apiKey = 'AIzaSyBboGvIhRw2S5TcpUCDgmExDpUT1qIs1g4'
   return fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`,
@@ -32,4 +14,22 @@ export function authWithEmailAndPassword(email, password) {
     })
     .then( response => response.json())
     .then( data => data.idToken)
+}
+
+export function getAuthForm() {
+    return `
+    <form class="mui-form" id="auth-form">
+      <div class="mui-textfield mui-textfield--float-label">
+        <input type="email" id="email" required>
+        <label for="email">Email</label>
+      </div>
+      <div class="mui-textfield mui-textfield--float-label">
+        <input type="password" id="password" required>
+        <label for="password">Пароль</label>
+      </div>
+      <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">
+        Войти
+      </button>
+    </form>
+  `
 }

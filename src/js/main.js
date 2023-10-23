@@ -1,5 +1,5 @@
-import './index.html'
-import './style.scss'
+import {DaysOfWeek, showDate, showTime} from "./utils";
+import '../sass/pages/main.scss'
 
 const elements = {
     language: localStorage.getItem('lang') ? localStorage.getItem('lang') : document.getElementsByTagName("html")[0].getAttribute("lang"),
@@ -13,49 +13,19 @@ const elements = {
     // date_name_week: document.querySelectorAll('.custom-select__city-address'),
 }
 
+
 window.onload = function () {
     console.log('Hi, Zajkov Mikhail')
     showTime();
     showDate();
-    addHamburgerClickHandler();
+    addHamburgerClickHandler()
     startCalendar();
     selectWeeks();
 }
 
-const DaysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Су', 'Вс'];
-
-// SHOW TIME
-function showTime() {
-    const date = new Date();
-    elements.time.textContent = date.toLocaleTimeString();
-    setTimeout(showTime, 1000);
-}
-
-
-// SHOW DATE
-function showDate() {
-    const date = new Date();
-    let dayWeek = date.getDay();
-    let dayNum = date.getDate();
-    let month = date.getMonth();
-    const monthRus = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
-    const monthBel = ["студзеня", "лютага", "сакавiка", "красавiка", "мая", "червеня", "лiпеня", "жнiвеня", "верасеня", "кастрычнiка", "лiстапада", "снежаня"];
-    const weekdayRus = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-    const weekdayBel = ["Нядзеля", "Панядзелак", "Аўторак", "Серада", "Чацвер", "Пятніца", "Субота",];
-
-    // "Воскресенье, 16 мая" / "Sunday, May 16" / "Нядзеля, 16 траўня"
-    if (elements.language === 'en') {
-        const options = {weekday: 'long', day: 'numeric', month: 'long'};
-        elements.data.textContent = date.toLocaleDateString(elements.language, options) // 'ru-RU', 'be-BE'
-    } else if (elements.language === 'ru') {
-        elements.data.textContent = `${weekdayRus[dayWeek]}, ${dayNum} ${monthRus[month]}`
-    } else if (elements.language === 'be') {
-        elements.data.textContent = `${weekdayBel[dayWeek]}, ${dayNum} ${monthBel[month]}`
-    }
-}
 
 // HAMBURGER & MENU
-const addHamburgerClickHandler = () => {
+function addHamburgerClickHandler() {
     elements.hamburger.addEventListener('click', e => {
         e.stopPropagation();
         toggleMenu();
@@ -76,7 +46,7 @@ let Cal = function(divId) {
     this.divId = divId;
 
     // Дни недели с понедельника
-    this.DaysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Су', 'Вс'];
+    // this.DaysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Су', 'Вс'];
 
     // Месяцы начиная с января
     this.Months =['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
@@ -133,8 +103,8 @@ Cal.prototype.showMonth = function(y, m) {
 
     // заголовок дней недели
     html += '<tr class="days-name">';
-    for(let i = 0; i < this.DaysOfWeek.length; i++) {
-        html += '<td>' + this.DaysOfWeek[i] + '</td>';
+    for(let i = 0; i < DaysOfWeek.length; i++) {
+        html += '<td>' + DaysOfWeek[i] + '</td>';
     }
     html += '</tr>';
 
@@ -186,7 +156,7 @@ Cal.prototype.showMonth = function(y, m) {
     document.getElementById(this.divId).innerHTML = html;
 };
 
-const startCalendar = () => {
+function startCalendar() {
     // Начать календарь
     let c = new Cal("divCal");
     c.showCurr();
@@ -224,8 +194,13 @@ Date.prototype.getWeek = function(start) {
     return [MoDate, TuDate, WeDate, ThDate, FrDate, SaDate, SuDate];
 }
 
-const selectWeeks = () => {
+function selectWeeks() {
+
+    let dow = new Date().getDate()
+    console.log(dow)
+
     const Dates = new Date().getWeek();
+
     elements.week.innerText = Dates[0].toLocaleDateString() + ' - '+ Dates[6].toLocaleDateString()
     const date_format = { day: '2-digit', month: '2-digit'}
     document.querySelectorAll('.day-date').forEach((e, n) => {

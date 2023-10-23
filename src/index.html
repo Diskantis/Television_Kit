@@ -1,50 +1,61 @@
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css"/>
   <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
-  <title>ТЕЛЕВИЗИОННЫЙ ЖУРНАЛИСТСКИЙ КОМПЛЕКТ</title>
+  <title>TELEVISION JOURNALIST SET</title>
 </head>
 <body>
-<button class="mui-btn mui-btn--fab mui-btn--accent floating-btn" id="modal-btn">Все</button>
-<div id="sidebar">
-  <div class="mui--text-white sidebar-title mui--align-vertical">
-    ТЕЛЕВИЗИОННЫЙ ЖУРНАЛИСТСКИЙ КОМПЛЕКТ
-    <br>
-    <small class="author">by Zajkov Mikhail</small>
-  </div>
-</div>
-<div id="content" class="mui-container-fluid">
-  <div class="mui-row">
-    <div class="mui-col-sm-10 mui-col-sm-offset-1">
-      <br>
-      <br>
-      <div class="mui--text-black-54 mui--text-body2">Задай вопрос</div>
-      <div class="mui-divider"></div>
-      <br>
-
-      <form class="mui-form" id="form">
-        <div class="mui-textfield mui-textfield--float-label">
-          <input type="text" id="question-input" required minlength="10" maxlength="256">
-          <label for="question-input">Что хочешь спросить?:</label>
+<header class="header">
+  <div class="wrapper-header">
+    <div class="user-menu">
+      <div class="circle">
+        <div class="hamburger" disabled="true">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <button type="submit" id="submit" class="mui-btn mui-btn--raised mui-btn--primary" disabled>
-          Задать вопрос
+      </div>
+      <div class="user">
+        <span class="user_name">Пользователь:</span>
+      </div>
+    </div>
+    <date class="date"></date>
+    <time class="time"></time>
+  </div>
+</header>
+<main class="main">
+  <div class="wrapper-main">
+    <aside class="sidebar">
+      <div class="sidebar-title">
+        ТЕЛЕВИЗИОННЫЙ ЖУРНАЛИСТСКИЙ КОМПЛЕКТ
+        <br>
+        <small class="author">by Zajkov Mikhail</small>
+      </div>
+    </aside>
+    <div class="authentication">
+      <h1>Авторизация</h1>
+      <form class="mui-form" id="auth-form">
+        <div class="mui-textfield mui-textfield--float-label">
+          <input type="email" id="email" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="mui-textfield mui-textfield--float-label">
+          <input type="password" id="password" required>
+          <label for="password">Пароль</label>
+        </div>
+        <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">
+          Войти
         </button>
       </form>
-
-      <br>
-      <br>
-      <div class="mui--text-black-54 mui--text-body2">Ваши вопросы</div>
-      <div class="mui-divider"></div>
-      <br>
-      <div id="list"></div>
     </div>
   </div>
-</div>
+</main>
+<footer class="footer">
+  <span>© 2023</span>
+</footer>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
         integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
         data-cf-beacon='{"rayId":"817eb00188bdac0a","version":"2023.10.0","token":"c8bda678e8c641c3bc7781653b8a1835"}'

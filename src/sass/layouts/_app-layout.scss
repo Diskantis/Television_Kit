@@ -1,0 +1,76 @@
+.sidebar {
+  width: 12vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 10px;
+  background-color: #252525;
+  margin: 10px 0;
+  padding: 30px 15px 15px;
+}
+
+.sidebar-title {
+  color: #FFFFFF;
+  @extend %font-secondary;
+  @include font($size: 2.0rem, $height: 3.0rem);
+}
+
+.author {
+  font-size: 1.5rem;
+}
+
+.authentication {
+  width: 86vw;
+}
+
+.authentication h1 {
+  text-align: center;
+}
+
+// Форма с логином и паролем
+.mui-form {
+  padding: 0 180px;
+}
+
+.mui-textfield > input {
+  color: rgb(250, 250, 250);
+  background-color: #494747;
+  border-color: #2196F3;
+  border-width: 2px;
+}
+
+.mui-textfield > input:focus ~ label {
+  color: #2196F3
+}
+
+.mui-textfield > label {
+  width: 100px;
+}
+
+.mui-textfield--float-label > label {
+  color: rgb(250, 250, 250);
+}
+
+// Модальное окно
+.modal {
+  max-width: 600px;
+  max-height: 300px;
+  margin: 400px 0 0 800px;
+  overflow-y: auto;
+  background: #FFFFFF;
+}
+
+.modal > h1 {
+  color: red;
+  text-align: center;
+}
+
+.modal .modal-content {
+  padding: 1rem;
+}
+
+// Сообщение об ошибке
+.error {
+  color: red;
+}

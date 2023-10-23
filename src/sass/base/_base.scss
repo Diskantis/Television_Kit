@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -19,15 +19,24 @@ body {
 
 .header {
   height: 5vh;
-  background-color: #424242;
+  background-color: #285032;
 }
 
 .main {
   height: 92vh;
-  //background-color: #bbb9b9;
+}
+
+.wrapper-main {
+  display: flex;
+  margin: 0 1vw;
 }
 
 .footer {
   height: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  letter-spacing: 2px;
   background-color: #285032;
 }

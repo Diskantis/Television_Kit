@@ -10,15 +10,19 @@
 @import "../../sass/base/base";
 @import "../../sass/base/fonts";
 
+// Pages
+
 // Layouts
+@import "../../sass/layouts/app-layout";
 @import "../../sass/layouts/wrapper";
 @import "../../sass/layouts/header";
-@import "../../sass/layouts/employee";
-@import "../../sass/layouts/navigation";
+@import "../../sass/layouts/schedule";
 @import "../../sass/layouts/columns";
 @import "../../sass/layouts/footer";
+@import "../../sass/layouts/navigation";
 
 // Components
 @import "../../sass/components/hamburger";
+@import "../../sass/components/calendar";
 @import "../../sass/components/buttons";
 @import "../../sass/components/icons";
