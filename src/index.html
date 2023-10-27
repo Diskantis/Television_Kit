@@ -3,25 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css"/>
-  <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
   <title>TELEVISION JOURNALIST SET</title>
 </head>
 <body>
 <header class="header">
   <div class="wrapper-header">
-    <div class="user-menu">
-      <div class="circle">
-        <div class="hamburger" disabled="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div class="user">
-        <span class="user_name">Пользователь:</span>
-      </div>
-    </div>
+    <div class="user-menu"></div>
     <date class="date"></date>
     <time class="time"></time>
   </div>
@@ -36,17 +23,17 @@
       </div>
     </aside>
     <div class="authentication">
-      <h1>Авторизация</h1>
-      <form class="mui-form" id="auth-form">
-        <div class="mui-textfield mui-textfield--float-label">
+      <h1 class="auth_title">Авторизация</h1>
+      <form class="auth-form">
+        <div class="textfield">
           <input type="email" id="email" required>
-          <label for="email">Email</label>
+          <label class="label_email" for="email">Логин</label>
         </div>
-        <div class="mui-textfield mui-textfield--float-label">
-          <input type="password" id="password" required>
-          <label for="password">Пароль</label>
+        <div class="textfield">
+          <input type="password" id="password" autocomplete="off" required>
+          <label class="label_password" for="password">Пароль</label>
         </div>
-        <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">
+        <button type="submit" class="submit-btn">
           Войти
         </button>
       </form>

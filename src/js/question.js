@@ -18,7 +18,7 @@ export class Question {
 
   static fetch(token) {
     if (!token) {
-      return Promise.resolve('<p class="error">У вас нет токена</p>')
+      return Promise.resolve('<p class="error">Неверный Логин или Пароль</p>')
     }
     return fetch(`https://television-kit-default-rtdb.europe-west1.firebasedatabase.app/questions.json?auth=${token}`)
       .then(response => response.json())

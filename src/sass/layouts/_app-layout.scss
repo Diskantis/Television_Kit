@@ -22,55 +22,163 @@
 
 .authentication {
   width: 86vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: start;
 }
 
-.authentication h1 {
-  text-align: center;
+.auth_title {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
+
 
 // Форма с логином и паролем
-.mui-form {
-  padding: 0 180px;
+.auth-form {
+  padding: 50px 180px;
 }
 
-.mui-textfield > input {
-  color: rgb(250, 250, 250);
+.label {
+  color: rgba(255, 255, 255);
+  @extend %font-secondary;
+  @include font($size: 1.6rem, $height: 3.2rem);
+  transform: translate(0, 0);
+  cursor: text;
+  &_email {
+    position: absolute;
+    padding-left: 10px;
+    left: 430px;
+    top: 188px;
+    transition: all .15s ease-out;
+  }
+  &_password {
+    position: absolute;
+    padding-left: 10px;
+    left: 430px;
+    top: 250px;
+    transition: all .15s ease-out;
+  }
+}
+
+.label_email.no_empty {
+  color: #2196F3;
+  @include font($size: 1.2rem, $height: 1.5rem);
+  top: 163px;
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all .15s ease-out;
+}
+
+.label_password.no_empty {
+  color: #2196F3;
+  @include font($size: 1.2rem, $height: 1.5rem);
+  top: 225px;
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all .15s ease-out;
+}
+
+#email, #password {
+  width: 100%;
+  height: 32px;
   background-color: #494747;
-  border-color: #2196F3;
-  border-width: 2px;
+  outline: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid #2196F3;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  &:-webkit-autofill {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0 40rem #494747 inset;
+  }
+  &:-webkit-autofill:focus {
+    border-bottom: 2px solid #ff2e2e;
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0 40rem #494747 inset;
+
+  }
+  //&:focus ~ .label_email {
+  //  color: #2196F3;
+  //  @include font($size: 1.2rem, $height: 1.5rem);
+  //  top: 163px;
+  //  display: block;
+  //  overflow-x: hidden;
+  //  text-overflow: ellipsis;
+  //  white-space: nowrap;
+  //  transition: all .15s ease-out;
+  //}
+  //&:focus ~ .label_password {
+  //  color: #2196F3;
+  //  @include font($size: 1.2rem, $height: 1.5rem);
+  //  top: 225px;
+  //  display: block;
+  //  overflow-x: hidden;
+  //  text-overflow: ellipsis;
+  //  white-space: nowrap;
+  //  transition: all .15s ease-out;
+  //}
 }
 
-.mui-textfield > input:focus ~ label {
-  color: #2196F3
-}
-
-.mui-textfield > label {
-  width: 100px;
-}
-
-.mui-textfield--float-label > label {
-  color: rgb(250, 250, 250);
+.submit-btn {
+  @extend %font-secondary;
+  @include font($size: 1.4rem, $height: 1.8rem, $weight: 500);
+  text-transform: uppercase;
+  color: #FFF;
+  background-color: #2196F3;
+  display: inline-block;
+  height: 36px;
+  padding: 0 26px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  touch-action: manipulation;
+  &:hover {
+    background-color: #39a1f4;
+  }
 }
 
 // Модальное окно
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0,0,0,.5);
+  overflow: auto;
+}
+
 .modal {
-  max-width: 600px;
-  max-height: 300px;
+  //position: absolute;
+  //top: 20px;
+  width: 600px;
+  height: 150px;
   margin: 400px 0 0 800px;
   overflow-y: auto;
   background: #FFFFFF;
-}
-
-.modal > h1 {
-  color: red;
-  text-align: center;
+  z-index: 101;
 }
 
 .modal .modal-content {
-  padding: 1rem;
+  //padding: 1rem;
 }
 
 // Сообщение об ошибке
 .error {
+  @extend %font-secondary;
+  @include font($size: 2.0rem, $height: 2.2rem, $weight: 600);
   color: red;
+  text-align: center;
 }

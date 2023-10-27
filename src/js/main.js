@@ -1,28 +1,24 @@
-import {DaysOfWeek, showDate, showTime} from "./utils";
+import {showDate, showTime, DaysOfWeek, Months} from "./utils";
 import '../sass/pages/main.scss'
 
 const elements = {
-    language: localStorage.getItem('lang') ? localStorage.getItem('lang') : document.getElementsByTagName("html")[0].getAttribute("lang"),
     time: document.querySelector('.time'),
     data: document.querySelector('.date'),
-    hamburger: document.querySelector('.hamburger'),
+    hamburger: document.querySelector('.hamburger-circle'),
     menu: document.querySelector('.nav-menu'),
     calendar: document.querySelector('.calendar'),
     mount: document.querySelector('.mount'),
     week: document.querySelector('.select-week_current'),
-    // date_name_week: document.querySelectorAll('.custom-select__city-address'),
 }
 
 
 window.onload = function () {
-    console.log('Hi, Zajkov Mikhail')
     showTime();
     showDate();
-    addHamburgerClickHandler()
     startCalendar();
     selectWeeks();
+    addHamburgerClickHandler()
 }
-
 
 // HAMBURGER & MENU
 function addHamburgerClickHandler() {
@@ -36,7 +32,6 @@ const toggleMenu = () => {
     elements.hamburger.classList.toggle('active');
     elements.menu.classList.toggle('active');
     elements.calendar.classList.toggle('active');
-    console.log("Привет")
 }
 
 
@@ -44,12 +39,6 @@ const toggleMenu = () => {
 let Cal = function(divId) {
     //Сохраняем идентификатор div
     this.divId = divId;
-
-    // Дни недели с понедельника
-    // this.DaysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Су', 'Вс'];
-
-    // Месяцы начиная с января
-    this.Months =['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
     //Устанавливаем текущий месяц, год
     let d = new Date();
@@ -97,7 +86,7 @@ Cal.prototype.showMonth = function(y, m) {
         , lastDayOfLastMonth = m === 0 ? new Date(y-1, 11, 0).getDate() : new Date(y, m, 0).getDate();
 
     // Запись выбранного месяца и года
-    elements.mount.innerText = this.Months[m] + ' ' + y
+    elements.mount.innerText = Months[m] + ' ' + y
 
     let html = '<table>';
 
