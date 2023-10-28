@@ -4,13 +4,6 @@ import {Question} from "./js/question";
 import './sass/pages/app.scss'
 
 
-window.onload = function () {
-  showTime();
-  showDate();
-  addInputEmailClickHandler();
-  addInputPasswordClickHandler()
-}
-
 const elements = {
   email: document.querySelector('#email'),
   password: document.querySelector('#password'),
@@ -18,42 +11,32 @@ const elements = {
   label_password: document.querySelector('.label_password'),
 }
 
-function addInputEmailClickHandler() {
-  document.addEventListener('focusin', e => {
-    e.stopPropagation();
-    if (e.target === elements.email) {
-      elements.label_email.classList.add('no_empty')
-    } else {
-      inputFormEmptyEmail();
-    }
-  })
+window.onload = function () {
+  showTime();
+  showDate();
+  addInputClickHandler(elements.email, elements.label_email);
+  addInputClickHandler(elements.password, elements.label_password);
 }
 
-function addInputPasswordClickHandler() {
+
+function addInputClickHandler(field, label) {
   document.addEventListener('click', e => {
     e.stopPropagation();
-    if (e.target === elements.password) {
-      elements.label_password.classList.add('no_empty')
+    if (e.target === field) {
+      field.style.borderColor = '#69ff2e'
+      label.classList.add('no_empty')
     } else {
-      inputFormEmptyPassword();
+      label.classList.remove('no_empty')
+      field.style.borderColor = '#2196F3'
     }
   })
-}
 
-function inputFormEmptyEmail() {
-  if (elements.email.value !== '') {
-    elements.label_email.classList.add('no_empty')
-  } else {
-    elements.label_email.classList.remove('no_empty')
-  }
-}
-
-function inputFormEmptyPassword() {
-  if (elements.password.value !== '') {
-    elements.label_password.classList.add('no_empty')
-  } else {
-    elements.label_password.classList.remove('no_empty')
-  }
+  document.addEventListener('click', () => {
+    if (field.value !== '') {
+      field.style.borderColor = '#69ff2e'
+      label.classList.add('no_empty')
+    }
+  })
 }
 
 document.addEventListener('submit', authFormHandler, {once: true});
@@ -64,7 +47,6 @@ function authFormHandler(event) {
   const btn = event.target.querySelector('button')
   const email = event.target.querySelector('#email').value
   const password = event.target.querySelector('#password').value
-  console.log(email)
 
   authWithEmailAndPassword(email, password)
     .then(token => {
@@ -77,13 +59,18 @@ function authFormHandler(event) {
 function renderModalAfterAuth(content) {
   if (typeof content === "string") {
     createModal( "Ошибка!", content)
+    elements.email.style.borderColor = '#ff2e2e'
+    elements.password.style.borderColor = '#ff2e2e'
+    document.addEventListener("click", () => {
+      document.querySelector('.overlay').remove();
+      document.querySelector('.modal').remove();
+      window.location.href = 'index.html';
+    })
   } else {
-    document.querySelector('#email').value = '';
-    document.querySelector('#password').value = '';
-
     window.location.href = 'pages/main.html';
     document.querySelector('#email').value = '';
     document.querySelector('#password').value = '';
     // createModal( "Список вопросов", Question.listToHTML(content))
   }
 }
+

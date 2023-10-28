@@ -1,5 +1,6 @@
 .sidebar {
-  width: 12vw;
+  //width: 12vw;
+  width: 230px;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -37,7 +38,8 @@
 
 // Форма с логином и паролем
 .auth-form {
-  padding: 50px 180px;
+  width: 100%;
+  padding: 50px 180px 30px;
 }
 
 .label {
@@ -98,33 +100,8 @@
     -webkit-text-fill-color: #fff;
     -webkit-box-shadow: 0 0 0 40rem #494747 inset;
   }
-  &:-webkit-autofill:focus {
-    border-bottom: 2px solid #ff2e2e;
-    -webkit-text-fill-color: #fff;
-    -webkit-box-shadow: 0 0 0 40rem #494747 inset;
-
-  }
-  //&:focus ~ .label_email {
-  //  color: #2196F3;
-  //  @include font($size: 1.2rem, $height: 1.5rem);
-  //  top: 163px;
-  //  display: block;
-  //  overflow-x: hidden;
-  //  text-overflow: ellipsis;
-  //  white-space: nowrap;
-  //  transition: all .15s ease-out;
-  //}
-  //&:focus ~ .label_password {
-  //  color: #2196F3;
-  //  @include font($size: 1.2rem, $height: 1.5rem);
-  //  top: 225px;
-  //  display: block;
-  //  overflow-x: hidden;
-  //  text-overflow: ellipsis;
-  //  white-space: nowrap;
-  //  transition: all .15s ease-out;
-  //}
-}
+  //border-bottom: 2px solid #ff2e2e;
+ }
 
 .submit-btn {
   @extend %font-secondary;
@@ -135,14 +112,10 @@
   display: inline-block;
   height: 36px;
   padding: 0 26px;
-  margin: 6px 0;
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
   transition: all .2s ease-in-out;
-  touch-action: manipulation;
   &:hover {
     background-color: #39a1f4;
   }
@@ -159,20 +132,29 @@
   background-color: rgba(0,0,0,.5);
   overflow: auto;
 }
+.overlay.active{
+  display: none;
+}
 
 .modal {
-  //position: absolute;
-  //top: 20px;
-  width: 600px;
-  height: 150px;
-  margin: 400px 0 0 800px;
-  overflow-y: auto;
-  background: #FFFFFF;
+  width: 350px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  background: #545454;
+  margin: 10px auto;
   z-index: 101;
 }
 
-.modal .modal-content {
-  //padding: 1rem;
+.modal.active{
+  display: none;
+}
+
+.modal-content {
+  align-content: center;
 }
 
 // Сообщение об ошибке

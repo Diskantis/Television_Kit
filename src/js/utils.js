@@ -2,6 +2,9 @@ const elements = {
   language: localStorage.getItem('lang') ? localStorage.getItem('lang') : document.getElementsByTagName("html")[0].getAttribute("lang"),
   time: document.querySelector('.time'),
   data: document.querySelector('.date'),
+  email: document.querySelector('#email'),
+  password: document.querySelector('#password'),
+
   // hamburger: document.querySelector('.hamburger-circle'),
 }
 
@@ -45,9 +48,9 @@ export function showDate() {
 // }
 
 // VALIDATION
-export function isValid(value) {
-  return value.length >= 10
-}
+// export function isValid(value) {
+//   return value.length >= 10
+// }
 
 // MODAL WINDOWS
 export function createModal(title, content) {
@@ -62,6 +65,8 @@ export function createModal(title, content) {
     <div class="modal-content">${content}</div>
   `
   document.querySelector('.authentication').append(modal)
+  // elements.email.style.borderColor = '#ff2e2e'
+  // elements.password.style.borderColor = '#ff2e2e'
   // mui.overlay('on', modal)
 
 }
